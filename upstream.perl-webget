@@ -1,3 +1,2 @@
-# The *puzzle* is mirror in Swiss
- tag1: bcrypt
-   http://prdownloads.sourceforge.net/bcrypt/bcrypt-1.1.tar.gz mirror:mesh page: new: x:
+tag1: bcrypt
+   http://packages.debian.org/unstable/bcrypt regexp:orig.tar.gz file:bcrypt_1.1.orig.tar.gz new: x:
