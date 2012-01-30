@@ -1,0 +1,47 @@
+--- bcrypt-1.1/Makefile	2002-09-12 12:32:24.000000000 +0300
++++ ../bcrypt-1.1/Makefile	2006-02-27 18:36:52.000000000 +0200
+@@ -6,10 +6,38 @@
+ LDFLAGS = -L/usr/local/lib -lz 
+ PREFIX = /usr/local
+ 
++PACKAGE         = bcrypt
++INSTALL         = /usr/bin/install
++INSTALL_BIN     = $(INSTALL) -m 755
++INSTALL_DATA    = $(INSTALL) -m 644
++INSTALL_OBJS    = $(PACKAGE)
++
++INSTALL_OBJS_MAN1  = *.1
++INSTALL_OBJS_SHARE =
++
++MANDIR1         = $(DESTDIR)$(man_prefix)/man/man1
++MANDIR5         = $(DESTDIR)$(man_prefix)/man/man5
++MANDIR8         = $(DESTDIR)$(man_prefix)/man/man8
++BINDIR          = $(DESTDIR)$(exec_prefix)/bin
++SBINDIR         = $(DESTDIR)$(exec_prefix)/sbin
++ETCDIR          = $(DESTDIR)$/etc/$PACKAGE
++SHAREDIR        = $(DESTDIR)$(prefix)/share/$(PACKAGE)
++LIBDIR          = $(DESTDIR)$(prefix)/lib/$(PACKAGE)
++
+ bcrypt:	${OBJS} Makefile
+ 	${COMPILE} -o bcrypt ${OBJS} ${LDFLAGS}
+ 
+-install:	bcrypt Makefile
++install-bin:
++	$(INSTALL_BIN) -d $(BINDIR)
++	$(INSTALL_BIN) -s $(INSTALL_OBJS) $(BINDIR)
++
++install-man:
++	$(INSTALL_BIN) -d $(MANDIR1)
++	$(INSTALL_DATA) $(INSTALL_OBJS_MAN1) $(MANDIR1)
++
++install: $(PACKAGE) install-bin install-man
++
++install-old:	bcrypt Makefile
+ 	mkdir -p ${PREFIX}/bin;\
+ 	mkdir -p ${PREFIX}/man/man1;\
+ 	cp bcrypt ${PREFIX}/bin;\
+@@ -40,4 +68,3 @@
+ 
+ clean:
+ 	rm -rf *.o bcrypt bcrypt.core core bcrypt.tgz 
+-

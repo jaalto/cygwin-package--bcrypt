@@ -1,0 +1,77 @@
+ bcrypt
+------------------------------------------
+
+Cross platform file encryption utility using blowfish
+
+A a cross platform file encryption utility. Encrypted files
+are portable across all supported operating systems and processors. In
+addition to encrypting your data, bcrypt will by default overwrite the
+original input file with random garbage three times before deleting it
+in order to thwart data recovery attempts by persons who may gain
+access to your computer. Bcrypt uses the blowfish encryption algorithm
+published by Bruce Schneier in 1993.
+
+Runtime requirements:
+  cygwin
+  zlib
+
+Build requirements:
+  cygwin
+  zlib
+
+Canonical homepage:
+  http://sourceforge.net/projects/bcrypt
+  http://packages.debian.org/bcrypt
+
+Canonical download:
+  See above
+
+Version control repository:
+
+Mailing list:
+
+IRC channel:
+
+Upstream contact:
+  Author: Johnny Shelley <jwshelley@users.sourceforge.net>
+  Bugs: Johnny Shelley <jwshelley@users.sourceforge.net>
+
+License:
+  BSD
+
+Language:
+  C
+
+------------------------------------
+
+Build instructions:
+  unpack bcrypt-1.1-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+    unpacked under /usr/src automatically
+  cd /usr/src
+  ./bcrypt*.sh all
+
+This will create:
+  bcrypt-1.1-1.tar.bz2
+  bcrypt-1.1-1-src.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary distro:
+
+usr/bin/bcrypt.exe
+usr/share/doc/Cygwin/bcrypt-1.1.README
+usr/share/doc/bcrypt-1.1/LICENSE
+usr/share/doc/bcrypt-1.1/README
+usr/share/man/man1/bcrypt.1.gz
+
+------------------
+
+Port Notes:
+
+----- version 1.1-1 -----
+- Initial release 2007-08-28 Jari Aalto
+- This port is based on sourceforge.
+- Makefile: install target rewritten
+
+Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
