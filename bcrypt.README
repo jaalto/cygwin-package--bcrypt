@@ -1,4 +1,4 @@
- bcrypt
+bcrypt
 ------------------------------------------
 
 Cross platform file encryption utility using blowfish
@@ -7,20 +7,20 @@ A a cross platform file encryption utility. Encrypted files
 are portable across all supported operating systems and processors. In
 addition to encrypting your data, bcrypt will by default overwrite the
 original input file with random garbage three times before deleting it
-in order to thwart data recovery attempts by persons who may gain
-access to your computer. Bcrypt uses the blowfish encryption algorithm
-published by Bruce Schneier in 1993.
+in order to thwart data recovery attempts.
+
+The used file extension is *.bfe.
 
 Runtime requirements:
-  cygwin
-  zlib
+  zlib0
 
 Build requirements:
-  cygwin
-  zlib
+  zlib-devel
 
 Canonical homepage:
+  http://freecode.com/projects/bcrypt
   http://sourceforge.net/projects/bcrypt
+  http://bcrypt.sourceforge.net
   http://packages.debian.org/bcrypt
 
 Canonical download:
@@ -29,12 +29,13 @@ Canonical download:
 Version control repository:
 
 Mailing list:
+  http://sourceforge.net/mailarchive/forum.php?forum_name=bcrypt-users
 
 IRC channel:
 
 Upstream contact:
-  Author: Johnny Shelley <jwshelley@users.sourceforge.net>
-  Bugs: Johnny Shelley <jwshelley@users.sourceforge.net>
+  Author: Johnny Shelley <jwshelley@users.sourceforge.net>, <jshelley@cahaus.com>
+  Bugs: https://sourceforge.net/tracker/?group_id=62194&atid=499719
 
 License:
   BSD
@@ -58,20 +59,19 @@ This will create:
 -------------------------------------------
 
 Files included in the binary distro:
-
-usr/bin/bcrypt.exe
-usr/share/doc/Cygwin/bcrypt-1.1.README
-usr/share/doc/bcrypt-1.1/LICENSE
-usr/share/doc/bcrypt-1.1/README
-usr/share/man/man1/bcrypt.1.gz
+  See Cygwin package archive
 
 ------------------
 
 Port Notes:
 
+----- version 1.1-2 -----
+- Cygwin packaging update; 2012-09-27 Jari Aaalto
+- Like depends zlib => zlib0 etc.
+- Add test cases in test/ directory.
+
 ----- version 1.1-1 -----
 - Initial release 2007-08-28 Jari Aalto
-- This port is based on sourceforge.
-- Makefile: install target rewritten
 
 Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
+Copyright (C) 2007-2012 Jari Aalto; Licensed under GPL v2 or later

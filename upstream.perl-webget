@@ -1,2 +1,2 @@
 tag1: bcrypt
-   http://packages.debian.org/unstable/bcrypt regexp:orig.tar.gz file:bcrypt_1.1.orig.tar.gz new: x:
+   bcrypt_1.1.orig.tar.gz pregexp:orig.tar.gz file:bcrypt_1.1.orig.tar.gz new: x:

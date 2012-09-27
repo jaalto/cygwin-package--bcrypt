@@ -1,10 +1,8 @@
 sdesc: "Cross platform file encryption utility using blowfish"
-ldesc: "A cross platform file encryption utility. Encrypted files
+ldesc: "A a cross platform file encryption utility. Encrypted files
 are portable across all supported operating systems and processors. In
 addition to encrypting your data, bcrypt will by default overwrite the
 original input file with random garbage three times before deleting it
-in order to thwart data recovery attempts by persons who may gain
-access to your computer. Bcrypt uses the blowfish encryption algorithm
-published by Bruce Schneier in 1993."
+in order to thwart data recovery attempts."
 category: Security
-requires: cygwin zlib
+requires: zlib0
