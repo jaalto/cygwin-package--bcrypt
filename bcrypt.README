@@ -47,15 +47,15 @@ Language:
 ------------------------------------
 
 Build instructions:
-  unpack bcrypt-1.1-1-src.tar.bz2
+  unpack bcrypt-1.1-3-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./bcrypt*.sh all
 
 This will create:
-  bcrypt-1.1-1.tar.bz2
-  bcrypt-1.1-1-src.tar.bz2
+  bcrypt-1.1-3.tar.bz2
+  bcrypt-1.1-3-src.tar.bz2
 
 -------------------------------------------
 
@@ -66,6 +66,10 @@ Files included in the binary distro:
 
 Port Notes:
 
+----- version 1.1-3 -----
+- Cygwin packaging update: 2013-09-14 Jari Aalto
+- Add patch for Makefile
+
 ----- version 1.1-2 -----
 - Cygwin packaging update; 2012-09-27 Jari Aaalto
 - Like depends zlib => zlib0 etc.
@@ -74,5 +78,5 @@ Port Notes:
 ----- version 1.1-1 -----
 - Initial release 2007-08-28 Jari Aalto
 
-Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
-Copyright (C) 2007-2012 Jari Aalto; Licensed under GPL v2 or later
+Cygwin port maintained by: user <jari.aalto@cante.net>
+Copyright (C) 2007-2013 Jari Aalto; Licensed under GPL v2 or later

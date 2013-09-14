@@ -1,0 +1,45 @@
+From 0b94fd2640ee4eb552ab14bf6d28203db93beb5f Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Sat, 14 Sep 2013 13:29:09 +0300
+Subject: [PATCH] makefile install
+Organization: Private
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ Makefile |   13 +++++++------
+ 1 files changed, 7 insertions(+), 6 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index b84da0f..177606d 100755
+--- a/Makefile
++++ b/Makefile
+@@ -5,17 +5,18 @@
+ OBJS = main.o blowfish.o rwfile.o keys.o wrapbf.o endian.o wrapzl.o
+ LDFLAGS = -L/usr/local/lib -lz 
+ PREFIX = /usr/local
++MANDIR = $(PREFIX)/share/man
+ 
+ bcrypt:	${OBJS} Makefile
+ 	${COMPILE} -o bcrypt ${OBJS} ${LDFLAGS}
+ 
+ install:	bcrypt Makefile
+-	mkdir -p ${PREFIX}/bin;\
+-	mkdir -p ${PREFIX}/man/man1;\
+-	cp bcrypt ${PREFIX}/bin;\
+-	cp bcrypt.1 ${PREFIX}/man/man1;\
+-	chmod 755 ${PREFIX}/bin/bcrypt;\
+-	chmod 644 ${PREFIX}/man/man1/bcrypt.1
++	mkdir -p $(DESTDIR)${PREFIX}/bin;\
++	mkdir -p $(DESTDIR)${MANDIR}/man1;\
++	cp bcrypt $(DESTDIR)${PREFIX}/bin;\
++	cp bcrypt.1 $(DESTDIR)${MANDIR}/man1; \
++	chmod 755 $(DESTDIR)${PREFIX}/bin/bcrypt;\
++	chmod 644 $(DESTDIR)${MANDIR}/man1/bcrypt.1
+ 
+ main.o:	main.c ${DEFAULTS}
+ 	${COMPILE} -c main.c
+-- 
+1.7.9
+
